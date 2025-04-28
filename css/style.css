@@ -1868,12 +1868,12 @@ input[type="text"]:focus {
         position: absolute;
         margin-top: 0.5em;
         width: 100%;
-        grid-template-columns: repeat(30, 1fr);
+        grid-template-columns: repeat(20, 30px);
         grid-template-rows: repeat(20, 30px);
     }
 
     .cont_tit_nosotros {
-        grid-column: 5/15;
+        grid-column: 6/16;
         grid-row: 2/6;
     }
     
@@ -1893,30 +1893,7 @@ input[type="text"]:focus {
         margin-top: 0px;
     }
 
-    .logo_dir_nosotros{
-        width: 150px;
-    }
 
-    .cont_dir_nosotros {
-        /* display: grid; */
-        position: relative;
-        grid-column: 5/6;
-        grid-row: 7/14;
-        width: 150px;
-        animation: entrandoIzq linear;
-        animation-timeline: view();
-        animation-range: entry 0% cover 70%;
-    }
-    
-    .cont_dir_nosotros>p {
-        position: relative;
-        margin: 0;
-        width: 200px;
-        padding: 0;
-        color: var(--color-principal);
-        font-size: var(--mediana);
-        font-weight: 400;
-    }
     
     .cont_ramas-der_nosotros {
         display: grid;
