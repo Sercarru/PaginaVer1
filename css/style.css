@@ -26,7 +26,7 @@
     --peque: 1rem;
 
     /* MEDIDAS */
-    --anchoMenu: 275px
+    --anchoMenu: 275px;
 }
 
 @keyframes entrandoIzq {
@@ -330,11 +330,8 @@ input[type="submit"]:hover {
 .cont_dir_nosotros {
     grid-column: 2/7;
     grid-row: 5/10;
-    /* display: flex;
-    flex-direction: column; */
     position: relative;
     top: -25px;
-    /* width: 100px; */
 }
 
 .cont_dir_nosotros>p {
@@ -685,7 +682,7 @@ input[type="submit"]:hover {
 .btn_servicios img {
     display: flex;
     padding: 5px 10px;
-    width: 25%;
+    width: 35%;
 
 }
 
@@ -1272,6 +1269,20 @@ input[type="text"]:focus {
         --anchoMain: 810px;
     }
 
+    
+    @keyframes entrandoIzq {
+        0% {
+            opacity: 0;
+            transform: translateX(-100px);
+            scale: 0.5;
+        }
+    
+        100% {
+            opacity: 1;
+            transform: translateX(0px);
+            scale: 1;
+        }
+    }
 
     /* ***********************NAV SIDE BAR ************************** */
 
@@ -1677,6 +1688,7 @@ input[type="text"]:focus {
     :root {
         --extraGde: 3rem;
         --grande: 2rem;
+        --casiGrande: 1.5rem;
         --mediana: 1.25rem;
         --chica: 1rem;
         --masChica: 0.85rem;
@@ -1694,7 +1706,7 @@ input[type="text"]:focus {
     @keyframes entrandoIzq {
         0% {
             opacity: 0;
-            transform: translateX(-90px);
+            transform: translateX(-200px);
             scale: 0.75;
         }
     
@@ -1757,28 +1769,24 @@ input[type="text"]:focus {
         width: var(--anchoMenu);
     }
 
-    /* li {
-        width: var(--anchoContMenuNav);
-        display: flex;
-        flex-direction: column;
-        font-family: var(--fuente-principal);
-        padding: 5px 5px;
-    } */
-
     li a .logo {
         width: 100px;
         margin-top: 2em;
         margin-bottom: 2em;
     }
 
-    
     #menu>.cont_datos_nav_dir>p,
     #menu>.cont_datos_nav_dir>.nav_direccion>p {
         top: 60px;
-        font-size: var(--Chica);
+        font-size: var(--mediana);
         flex-direction: column;
         padding: 0px 10px;
         text-align: center;
+    }
+
+    .menu_nav_link {
+        font-size: var(--mediana);
+        font-weight: 400;
     }
 
     #menu>.cont_datos_nav_dir>.datos_nav_dir2{
@@ -1868,10 +1876,12 @@ input[type="text"]:focus {
         position: absolute;
         margin-top: 0.5em;
         width: 100%;
+        height: 750px;
         grid-template-columns: repeat(20, 30px);
         grid-template-rows: repeat(20, 30px);
     }
 
+    
     .cont_tit_nosotros {
         grid-column: 6/16;
         grid-row: 2/6;
@@ -1880,35 +1890,57 @@ input[type="text"]:focus {
     .cont_tit_nosotros .nombre_despacho {
         border-bottom: solid 5px var(--botones);
     }
-
+    
     .abogados{
         position: relative;
         font-size: 25px;
         letter-spacing: 7px;
         top: -7px;
     }
-
+    
     .tpo_experiencia {
         font-size: var(--chica);
         margin-top: 0px;
     }
-
-
     
+    
+    .cont_dir_nosotros {
+        grid-column: 2/9;
+        grid-row: 7/19;
+        position: relative;
+        display: grid;
+        width: 225px;
+        grid-template-columns: repeat(20, 10px);
+        grid-template-rows: repeat(15, 25px);
+    }
+    
+    .logo_dir_nosotros{
+        width: 175px;
+        grid-column: 1/9;
+        grid-row: 2/10;
+        animation-range: entry 0% cover 50%;
+    }
+
+    .txt_dir_nosotros{
+        grid-column: 1/21;
+        grid-row: 10/15;
+    }
+    .cont_dir_nosotros > p{  
+        font-size: var(--mediana);
+    }
     .cont_ramas-der_nosotros {
         display: grid;
         position: absolute;
-        width: 100%;
+        width: 375px;
         height: 600px;
     
-        min-height: 500px;
+        min-height: 400px;
         max-height: 100%;
-        grid-column: 10/30;
+        grid-column: 9/30;
         grid-row: 7/30;
         padding: 1px;
-        grid-template-columns: repeat(40, 1fr);
-        grid-template-rows: repeat(22, 1fr);
-        /* gap: 0.1rem; */
+        grid-template-columns: repeat(19, 18px);
+        grid-template-rows: repeat(22, 20px);
         top: 0px;
         animation: entrandoDer linear;
         animation-timeline: view();
@@ -1922,15 +1954,49 @@ input[type="text"]:focus {
         border-top-right-radius: 10px;
         padding: 10px 15px;
         align-items: center;
-        font-size: var(--masChica);
+        font-size: var(--mediana);
         font-weight: 800;
-    
     }
     
+    .card1 {
+        position: relative;
+        /* background-color: rgb(189, 0, 0); */
+        grid-column: 2/10;
+        grid-row: 2/11;
+    }
+    .card2 {
+        position: relative;
+        /* background-color: rgb(189, 0, 0); */
+        grid-column: 11/19;
+        grid-row: 2/11;
+    }
+    .card3 {
+        position: relative;
+        /* background-color: rgb(189, 0, 0); */
+        grid-column: 2/10;
+        grid-row: 12/19;
+    }
+    .card4 {
+        position: relative;
+        /* background-color: rgb(189, 0, 0); */
+        grid-column: 11/19;
+        grid-row: 12/19;
+    }
+    .card5 {
+        position: relative;
+        /* background-color: rgb(189, 0, 0); */
+        grid-column: 2/19;
+        grid-row: 20/23;
+    }
+    .sdfsdfs{
+        color: #ff0000;
+
+    }
     .txt_card,
     .card5_txt {
-        padding: 20px;
-        font-size: var(--masChica);
+        /* color: var(--blanco); */
+        padding: 10px;
+        font-size: var(--chica);
         font-weight: 400;
     }
 
@@ -1939,13 +2005,12 @@ input[type="text"]:focus {
     .cont_servicios {
         display: grid;
         position: relative;
-        margin-top: 50em;
-        /* margin-left: 10px; */
+        margin-top: 65em;
         background: var(--fondoMenu);
-        width: 100%;
-        height: 875px;
+        width: 98%;
+        height: 750px;
         grid-template-columns: 30% 1fr;
-        grid-template-rows: repeat(5, 1fr);
+        grid-template-rows: repeat(5, 100px);
         gap: 15px;
         padding: 15px;
         font-size: var(--chica);
@@ -1953,33 +2018,93 @@ input[type="text"]:focus {
         border-bottom-right-radius: 25px;
         /* border-radius: 25px; */
     }
-    .cont_izq_servicios,
+
     .cont_der_servicios{
         width: 100%;
-        height: 825px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        height: 635px;
+        /* display: flex;
+        flex-direction: column; */
         /* padding: 15px; */
     }
     
-    .cont_izq_servicios {
+    .cont_izq_servicios{
+        width: 100%;
+        height: 735px;
+        position: inherit;
+        top: -10px;
+        justify-content: space-around;
+    }
+    .cont_der_servicios{
+        display: grid;
+        grid-template-columns: repeat(10,10px);
+    }
+
+    .txt_servicios>p{
+        font-size: var(--mediana);
+    }
+
+    .tit_esp_sevicios {
+        grid-column: 2/10;
+        grid-row: 1/2;
+    }
+
+    .btn_servicios {
+        position: relative;
+        width: 400px;
+        height: 50px;
+        left: 75px;
+        padding: 5px 10px;
+        cursor: pointer;
+        font-size: var(--casiGrande);
+        font-weight: 400;
+        color: var(--blanco);
         animation: entrandoIzq linear;
         animation-timeline: view();
-        animation-range: entry 0% cover 40%;
+        animation-range: entry 0% cover 10%;
+    }
+    
+    .btn_servicios img {
+        padding: 5px 10px;
+        width: 65px;
+    }
+
+    .acordeon {
+        box-sizing: border-box;
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        overflow: hidden;
+        width: 90%;
+        min-height: 550px;
+        /* max-height: 675px; */
+        font-family: var(--fuente-principal);
+        border: groove 3px var(--blancoCasitransp);
+        border-radius: 15px;
+        top:4em;
+        right: 2em;
+        margin: 0 auto;
+        background: var(--blancoCasitransp);
+        box-shadow: inset 0px 0px 50px rgba(0, 0, 0, 0.329), 0px 0px 40px rgba(17, 17, 17, 0.171);
     }
 
     .acordeon-content ul li {
         list-style-type: circle;
-        font-size: var(--chica);
+        font-size: var(--mediana);
         color: var(--blanco);
         font-weight: 200;
         width: 100%;
     }
 
+    .tit_acordeon {
+        font-size: var(--casiGrande);
+        font-weight: 800;
+        height: 2.5em;
+        line-height: 2em;
+    }
+
     /* *********************** ASOCIADOS ************************* */
     #cont_seccion_asociados {
-        height: 700px;
+        height: 500px;
         padding: 50px 5px;
     }
     
@@ -1989,10 +2114,7 @@ input[type="text"]:focus {
         grid-template-columns: 1fr 3em 1fr;
         grid-template-rows: 1fr 1fr;
         width: 100%;
-    
-        /* border: solid 3px var(--bordeFondoGaleria); */
-        /* justify-items: center; */
-        /* gap: 1em; */
+
     }
     
     .tit_asociados>p {
@@ -2021,11 +2143,11 @@ input[type="text"]:focus {
         flex-direction: column;
         position: relative;
         width: 90%;
-        height: 18em;
+        height: 16em;
         justify-content: space-evenly;
     
         li {
-            font-size: var(--chica);
+            font-size: var(--mediana);
             /* align-items: center; */
             /* border: solid 3px black; */
         }
@@ -2040,7 +2162,6 @@ input[type="text"]:focus {
     /* ************************** CONTACTO ******************************* */
 
     h1 {
-
         height: 75px;
         align-items: center;
         justify-content: center;
@@ -2056,12 +2177,9 @@ input[type="text"]:focus {
         position: relative;
         margin-top: 1rem;
         width: 100%;
-        height: 750px;
+        height: 650px;
         grid-template-columns: 1fr 10px 1fr 10px;
         grid-template-rows: repeat(10, 50px);
-        /* padding-top: 2em; */
-        /* gap: 25px; */
-    
     }
 
     .minifoto_main {
@@ -2076,13 +2194,28 @@ input[type="text"]:focus {
         flex-direction: column;
         justify-content: space-evenly;
         width: 100%;
-        height: 625px;
+        height: 500px;
         grid-column: 2/4;
         grid-row: 2/15;
         background: var(--fondoMenu);
         font-size: var(--chica);
     }
 
+    form {
+        height: 500px;
+        max-height: 500px;
+    }
+
+    .tit_form {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        font-size: var(--grande);
+        font-weight: 400;
+
+        padding: 20px;
+        letter-spacing: 0.25em;
+    }
     .cont_txt_contacto {
         display: flex;
         position: relative;
@@ -2091,10 +2224,10 @@ input[type="text"]:focus {
         width: 90%;
         height: 100%;
         grid-column: 1/1;
-        grid-row: 4/10;
+        grid-row: 3/10;
         padding-left: 5em;
         color: var(--color-principal);
-        font-size: var(--chica);
+        font-size: var(--mediana);
         /* border: solid 3px rgb(20, 83, 220); */
     }
 
@@ -2102,12 +2235,13 @@ input[type="text"]:focus {
         width: 100%;
         height: 65px;
         padding: 5px 10px;
-
+        font-size: var(--grande);
+        margin-top: 0.5em;
     }
 
     .btn_contacto img {
         display: flex;
-        height: 75px;
+        height: 40px;
         width: 75px;
     }
 
@@ -2115,13 +2249,18 @@ input[type="text"]:focus {
     .footer {
         display: flex;
         position: absolute;
+        justify-content: center;
+        align-items: center;
         width: 100%;
-        height: 150px;
+        height: 100px;
         background: var(--fondoMenu);
         grid-area: footer;
     }
     
-    
+    .cont_footer {
+        animation-range: entry 0% cover 0%;
+    }
+
     .cont_datos_footer>p {    
         display: flex;
         position: relative;
