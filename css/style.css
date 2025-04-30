@@ -1714,13 +1714,104 @@ input[type="text"]:focus {
 }
 
 /* //////////////////////////////////////////////////////////// */
-/* //////////////////// RESPONSIVE TABLETAS /////////////////// */
+/* //////////////////// RESPONSIVE TABLETAS SURFACE PRO 7/////////////////// */
 /* //////////////////////////////////////////////////////////// */
 
 @media (width < 950px) {
 
+    :root {
+        --extraGde: 4rem;
+        --grande: 2.5rem;
+        --mediana: 1.75rem;
+        --chica: 1.25rem;
+        --masChica: 1rem;
+        --peque: 0.85rem;
 
+        /* MEDIDAS */
+
+        --anchoMain: 750px;
+    }
+
+    /* ***********************NAV SIDE BAR ************************** */
+
+    #conteiner>nav {
+        display: flex;
+        position: fixed;
+        grid-area: aside;
+        height: 108vh;
+        width: var(--anchoMenu);
+    }
+
+    .redesSoc {
+        bottom: 75px;
+    }
+
+    /* ***********************FOTOMAIN ************************** */
+
+    #conteiner>main {
+        background: var(--blanco);
+        position: relative;
+        grid-area: contenido;
+        width: var(--anchoMain);
+        /* max-width: 900px; */
+    }
+
+    #fotomain {
+        position: relative;
+        width: 775px;
+        padding: 25px;
+        border-radius: 50px;
+        margin: 0 auto;
+    }
+
+    /******************************NOSOTROS ********************************/
+    .cont_ramas-der_nosotros {
+
+        grid-column: 8/30;
+        grid-row: 5/30;
+
+    }
+
+    /* *************************** SERVICIOS****************************** */
+    .acordeon {
+        min-height: 675px;
+        max-height: 700px;
+        right: 1em;
+    }
+
+    .cont_servicios{
+        height: 850px;
+    }
+    .cont_izq_servicios{
+        height: 775px;
+    }
     
+    /* *********************** ASOCIADOS ************************* */
+
+
+    .foto_asociado {
+        height: 14em;
+    }
+
+    /* ************************** CONTACTO ******************************* */
+
+    .cont_txt_contacto {
+
+        grid-column: 1/3;
+        font-size: var(--mediana);
+        padding-left: 2em;
+    }
+
+    /* *********************** FOOTER ********************************* */
+    .footer {
+        width: 780px;
+        height: 150px;
+    }
+
+    .cont_footer{
+        animation-range: entry 0% cover 0%;
+    }
+
 }
 
 
@@ -1728,7 +1819,7 @@ input[type="text"]:focus {
 /* //////////////////// RESPONSIVE TABLETAS iPAD AIR/////////////////// */
 /* //////////////////////////////////////////////////////////// */
 
-@media (width < 850px) {
+@media (width < 855px) {
 
     :root {
         --extraGde: 3rem;
@@ -2368,7 +2459,7 @@ input[type="text"]:focus {
 /* ***********************NAV SIDE BAR ************************** */
 @media (width < 786px) {
     #conteiner>nav {
-        height: 105vh;
+        height: 110vh;
     }
 
     .nav_direccion {
