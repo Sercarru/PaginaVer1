@@ -2508,6 +2508,14 @@ input[type="text"]:focus {
     #fotomain {
         width: 105%;
     }
+
+    
+    .cont_datos_footer>p {
+        color: var(--blanco);
+        font-size: var(--chica);
+        font-weight: 400;
+        /* background: var(--botones); */
+    }
 }
 
 
