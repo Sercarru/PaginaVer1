@@ -21,6 +21,7 @@
     --fuente-secundaria: "Cabin Condensed", sans-serif;
     --extraGde: 5rem;
     --grande: 3rem;
+    --casiGrande: 2.5rem;
     --mediana: 2rem;
     --chica: 1.5rem;
     --peque: 1rem;
@@ -93,6 +94,7 @@
     font-size: var(--peque);
     font-weight: 400;
     color: var(--color-principal);
+    /* max-width: 1040px; */
 }
 
 html {
@@ -392,7 +394,7 @@ input[type="submit"]:hover {
 }
 
 .cell-icon {
-    width: 25px;
+    width: 30px;
     margin-right: 1em;
     filter: invert(100%);
 }
@@ -1170,7 +1172,7 @@ input[type="text"]:focus {
 .btn_contacto {
     width: 100%;
     background-color: var(--botones);
-    margin-top: 2em;
+    margin-top: 1em;
     border-radius: 15px;
     border: none;
     display: flex;
@@ -1178,9 +1180,10 @@ input[type="text"]:focus {
     align-items: center;
     padding: 5px 10px;
     cursor: pointer;
-    font-size: var(--chica);
-    font-weight: 400;
+    font-size: var(--casiGrande);
+    font-weight: 600;
     color: var(--blanco);
+    letter-spacing: 10px;
 }
 
 .btn_contacto:hover {
@@ -1229,7 +1232,7 @@ input[type="text"]:focus {
     text-align: center;
     color: var(--blanco);
     font-size: var(--peque);
-    font-weight: 200;
+    font-weight: 400;
     /* background: var(--botones); */
 }
 
@@ -1254,7 +1257,12 @@ input[type="text"]:focus {
     justify-content: center;
 }
 
-
+.cont_datos_footer2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
 
 
 /* //////////////////////////////////////////////////////////// */
@@ -1313,7 +1321,7 @@ input[type="text"]:focus {
         width: 125px
     }
 
-    #menu>.cont_datos_nav_dir>p,
+    * #menu>.cont_datos_nav_dir>p,
     #menu>.cont_datos_nav_dir>.nav_direccion>p {
         width: var(--anchoContMenuNav);
         font-size: var(--chica);
@@ -1738,7 +1746,7 @@ input[type="text"]:focus {
         display: flex;
         position: fixed;
         grid-area: aside;
-        height: 108vh;
+        height: 100vh;
         width: var(--anchoMenu);
     }
 
@@ -1779,13 +1787,14 @@ input[type="text"]:focus {
         right: 1em;
     }
 
-    .cont_servicios{
+    .cont_servicios {
         height: 850px;
     }
-    .cont_izq_servicios{
+
+    .cont_izq_servicios {
         height: 775px;
     }
-    
+
     /* *********************** ASOCIADOS ************************* */
 
 
@@ -1808,7 +1817,7 @@ input[type="text"]:focus {
         height: 150px;
     }
 
-    .cont_footer{
+    .cont_footer {
         animation-range: entry 0% cover 0%;
     }
 
@@ -1937,7 +1946,7 @@ input[type="text"]:focus {
 
     .cell-icon {
         width: 25px;
-        padding-bottom: 0px 10px;
+        padding-bottom: 10px;
     }
 
     button.menu_nav_link {
@@ -2129,11 +2138,6 @@ input[type="text"]:focus {
         /* background-color: rgb(189, 0, 0); */
         grid-column: 2/19;
         grid-row: 20/23;
-    }
-
-    .sdfsdfs {
-        color: #ff0000;
-
     }
 
     .txt_card,
@@ -2458,8 +2462,35 @@ input[type="text"]:focus {
 
 /* ***********************NAV SIDE BAR ************************** */
 @media (width < 786px) {
+
+    :root {
+        --extraGde: 3rem;
+        --grande: 2rem;
+        --casiGrande: 1.5rem;
+        --mediana: 1.25rem;
+        --chica: 1rem;
+        --masChica: 0.85rem;
+        --peque: 0.75rem;
+
+        /* MEDIDAS */
+        --anchoMenu: 150px;
+        --anchoContMenuNav: 150px;
+        --anchoBotMenuNav: 115px;
+        --anchoMain: 600px;
+        --anchoContMain: 550px
+    }
+
+
     #conteiner>nav {
-        height: 110vh;
+        /* height: 1024px; */
+        display: flex;
+        height: 105vh;
+        position: fixed;
+    }
+
+    #conteiner>main {
+        position: relative;
+        max-width: var(--anchoMain);
     }
 
     .nav_direccion {
@@ -2484,11 +2515,250 @@ input[type="text"]:focus {
         /* margin-top: 850px; */
     }
 
+
+    /* ***********************FOTOMAIN ************************** */
+
+    #fotomain {
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+
+    /******************************NOSOTROS ********************************/
+
+    #cont_nosotros {
+        /* display: grid;
+        position: absolute;
+        margin-top: 0.5em;
+        width: 100%; */
+        height: 750px;
+        grid-template-rows: repeat(25, 30px);
+    }
+
+    /* 
+    .cont_tit_nosotros {
+        grid-column: 6/16;
+        grid-row: 2/6;
+    } */
+
+    /* .cont_tit_nosotros .nombre_despacho {
+        border-bottom: solid 5px var(--botones);
+    }
+
+    .abogados {
+        position: relative;
+        font-size: 25px;
+        letter-spacing: 7px;
+        top: -7px;
+    }
+
+    .tpo_experiencia {
+        font-size: var(--chica);
+        margin-top: 0px;
+    } */
+
+
+    .cont_dir_nosotros {
+        grid-column: 1/20;
+        grid-row: 5/10;
+        position: relative;
+        display: grid;
+        width: var(--anchoMain);
+        grid-template-columns: repeat(30, 20px);
+        grid-template-rows: repeat(9, 25px);
+    }
+
+    .logo_dir_nosotros {
+        width: 175px;
+        grid-column: 3/9;
+        grid-row: 2/10;
+        animation-range: entry 0% cover 50%;
+    }
+
+    .txt_dir_nosotros {
+        grid-column: 12/29;
+        grid-row: 3/15;
+    }
+
+    .cont_dir_nosotros>p {
+        font-size: var(--mediana);
+    }
+
+    .cont_ramas-der_nosotros {
+        display: grid;
+        position: absolute;
+        width: 565px;
+        /* width: var(--anchoContMain); */
+        /* background-color: rgb(189, 0, 0); */
+        min-height: 550px;
+        grid-column: 2/18;
+        grid-row: 13/20;
+        padding: 1px;
+        grid-template-columns: repeat(22, 25px);
+        grid-template-rows: repeat(15, 20px);
+        top: 0px;
+        animation: entrandoDer linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 0%;
+    }
+
+    .tit_card {
+        font-size: var(--casiGrande);
+        font-weight: 800;
+    }
+
+    .card1 {
+        /* background-color: rgb(154, 189, 0); */
+        grid-column: 2/11;
+        grid-row: 2/10;
+
+    }
+
+    .card2 {
+        position: relative;
+        /* background-color: rgb(154, 189, 0); */
+        grid-column: 12/21;
+        grid-row: 2/10;
+    }
+
+    .card3 {
+        position: relative;
+        /* background-color: rgb(154, 189, 0); */
+        grid-column: 2/11;
+        grid-row: 11/18;
+    }
+
+    .card4 {
+        position: relative;
+        /* background-color: rgb(154, 189, 0); */
+        grid-column: 12/21;
+        grid-row: 11/18;
+    }
+
+    .card5 {
+        position: relative;
+        /* background-color: rgb(154, 189, 0); */
+        grid-column: 2/21;
+        grid-row: 20/23;
+    }
+
+    .txt_card,
+    .card5_txt {
+        /* color: var(--blanco); */
+        padding: 10px;
+        font-size: var(--mediana);
+        font-weight: 500;
+    }
+
+
     /* *************************** SERVICIOS****************************** */
 
     .cont_servicios {
         width: 100%;
+        margin-top: 80em;
     }
+
+    /* *************************** SERVICIOS Depurar****************************** */
+    /* *************************** SERVICIOS Depurar****************************** */
+    /* *************************** SERVICIOS Depurar****************************** */
+    /* *************************** SERVICIOS Depurar****************************** */
+    /* *************************** SERVICIOS Depurar****************************** */
+    /* *************************** SERVICIOS Depurar****************************** */
+    /* *************************** SERVICIOS Depurar****************************** */
+    /* *************************** SERVICIOS Depurar****************************** */
+    /* *************************** SERVICIOS Depurar****************************** */
+    /* *************************** SERVICIOS Depurar****************************** */
+
+    
+    .cont_izq_servicios {
+        width: 100%;
+        height: 735px;
+        position: inherit;
+        top: -10px;
+        justify-content: space-around;
+    }
+    
+    .txt_servicios>p {
+        font-size: var(--mediana);
+    }
+    
+    .cont_der_servicios {
+        width: 100%;
+        height: 635px;
+        /* display: flex;
+        flex-direction: column; */
+        /* padding: 15px; */
+        /* display: grid;
+        grid-template-columns: repeat(10, 10px); */
+    }
+
+    .tit_esp_sevicios {
+        grid-column: 2/10;
+        grid-row: 1/2;
+    }
+
+    .btn_servicios {
+        position: relative;
+        width: 400px;
+        height: 50px;
+        left: 75px;
+        padding: 5px 10px;
+        cursor: pointer;
+        font-size: var(--casiGrande);
+        font-weight: 400;
+        color: var(--blanco);
+        animation: entrandoIzq linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 10%;
+    }
+
+    .btn_servicios img {
+        padding: 5px 10px;
+        width: 65px;
+    }
+
+    .acordeon {
+        box-sizing: border-box;
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        overflow: hidden;
+        width: 90%;
+        min-height: 550px;
+        /* max-height: 675px; */
+        font-family: var(--fuente-principal);
+        border: groove 3px var(--blancoCasitransp);
+        border-radius: 15px;
+        top: 4em;
+        right: 2em;
+        margin: 0 auto;
+        background: var(--blancoCasitransp);
+        box-shadow: inset 0px 0px 50px rgba(0, 0, 0, 0.329), 0px 0px 40px rgba(17, 17, 17, 0.171);
+    }
+
+    .acordeon-content ul li {
+        list-style-type: circle;
+        font-size: var(--mediana);
+        color: var(--blanco);
+        font-weight: 200;
+        width: 100%;
+    }
+
+    .tit_acordeon {
+        font-size: var(--casiGrande);
+        font-weight: 800;
+        height: 2.5em;
+        line-height: 2em;
+    }
+
+    /* *********************** ASOCIADOS ************************* */
+
+
+
+
+    /* *********************** ASOCIADOS ************************* */
+    /* ************************** CONTACTO ******************************* */
 
     /* *********************** FOOTER ********************************* */
 
@@ -2497,27 +2767,56 @@ input[type="text"]:focus {
         position: relative;
         justify-content: center;
         align-items: center;
-        width: 105%;
+        width: 100%;
         height: 100px;
         background: var(--fondoMenu);
         grid-area: footer;
-    }
-
-    /* ***********************FOTOMAIN ************************** */
-
-    #fotomain {
-        width: 105%;
-    }
-
-    
-    .cont_datos_footer>p {
-        color: var(--blanco);
-        font-size: var(--chica);
-        font-weight: 400;
         /* background: var(--botones); */
     }
-}
 
+    .cont_footer {
+        display: flex;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 0px;
+        animation: entrandoAbajo linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 0%;
+    }
+
+    .cont_datos_footer>p {
+
+        font-size: var(--chica);
+        font-weight: 300;
+        box-shadow: 8px 8px 8px rgb(121, 4, 4);
+    }
+
+    .cont_datos_footer>.lemafoot {
+        display: flex;
+        position: relative;
+        text-align: center;
+        /* color: var(--botones); */
+        font-size: var(--mediana);
+        font-weight: 400;
+        box-shadow: 8px 8px 8px rgb(121, 4, 4);
+    }
+
+    .cont_datos_footer>.imgfoot {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        box-shadow: 8px 8px 8px rgb(121, 4, 4);
+    }
+
+
+
+
+}
 
 /* //////////////////////////////////////////////////////////// */
 /* //////////////////// RESPONSIVE TABLETA 600px ////////////// */
@@ -2566,7 +2865,7 @@ input[type="text"]:focus {
 
     .cell-icon {
         width: 25px;
-        padding-bottom: 0px 10px;
+        padding-bottom: 10px;
     }
 
     button.menu_nav_link {
@@ -2609,15 +2908,15 @@ input[type="text"]:focus {
 /* //////////////////////////////////////////////////////////// */
 /* //////////////////// RESPONSIVE CELULAR //////////////////// */
 /* //////////////////////////////////////////////////////////// */
- @media screen and (max-width:420px) { 
+@media screen and (max-width:420px) {
 
-/* ***********************NAV SIDE BAR ************************** */
-/* ***********************FOTOMAIN ************************** */
-/******************************NOSOTROS ********************************/
-/* *************************** SERVICIOS****************************** */
-/* *********************** ASOCIADOS ************************* */
-/* ************************** CONTACTO ******************************* */
-/* *********************** FOOTER ********************************* */
+    /* ***********************NAV SIDE BAR ************************** */
+    /* ***********************FOTOMAIN ************************** */
+    /******************************NOSOTROS ********************************/
+    /* *************************** SERVICIOS****************************** */
+    /* *********************** ASOCIADOS ************************* */
+    /* ************************** CONTACTO ******************************* */
+    /* *********************** FOOTER ********************************* */
 
 
 }
