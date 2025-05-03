@@ -2659,17 +2659,7 @@ input[type="text"]:focus {
         margin-top: 80em;
     }
 
-    /* *************************** SERVICIOS Depurar****************************** */
-    /* *************************** SERVICIOS Depurar****************************** */
-    /* *************************** SERVICIOS Depurar****************************** */
-    /* *************************** SERVICIOS Depurar****************************** */
-    /* *************************** SERVICIOS Depurar****************************** */
-    /* *************************** SERVICIOS Depurar****************************** */
-    /* *************************** SERVICIOS Depurar****************************** */
-    /* *************************** SERVICIOS Depurar****************************** */
-    /* *************************** SERVICIOS Depurar****************************** */
-    /* *************************** SERVICIOS Depurar****************************** */
-
+    /* *************************** SERVICIOS ****************************** */
     
     .cont_izq_servicios {
         width: 100%;
@@ -2818,22 +2808,123 @@ input[type="text"]:focus {
         height: 18em;
     }
 
-    /* *********************** ASOCIADOS ************************* */
     /* ************************** CONTACTO ******************************* */
     #contacto {
         top: 400px;
+/* 
+        display: grid;
+        position: relative; */
+        /* top: -20px; */
+        width: var(--anchoMain);
+        height: 1250px; 
+        grid-template-columns: 1fr 10px 1fr 10px;
+        grid-template-rows: repeat(20, 40px);
+        gap: 10px;
+        border-radius: 15px;
+        margin: 10px;
+        box-shadow: 0px 0px 8px var(--azulOscuroSemiTransp); 
+
+
     }
+
+
     h1{
-        margin-top: 390px;
+        margin-top: 400px;
+    }
+
+    form {
+        max-height: 600px;
+        /* box-shadow: 01px 0px 15px rgb(255, 0, 0); */
+    }
+
+    #contacto .mapa_contacto {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        grid-column: 1/5;
+        grid-row: 2/6;
+        margin-top: 10px;
+        left: 25px;
+        animation: entrandoIzq linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 40%;
+    }
+
+    .cont_txt_contacto {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 100%;
+        height: 100%;
+        grid-column: 1/5;
+        grid-row: 7/12;
+        padding: 3em;
+        color: var(--color-principal);
+        font-size: var(--casiGrande);
+        font-weight: 600;
+        /* border: solid 3px rgb(20, 83, 220); */
+    }
+
+    .cont_formulario_contacto {
+
+        width: 95%;
+        height: 700px;
+        grid-column: 1/4;
+        grid-row: 11/15;
+        margin: 25px;
+        font-size: var(--casiGrande);
+    }
+
+    .cliente {
+        width: 100%;
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        margin: 0 auto;
+        padding: 2%;
+        border-radius: 15px;
+        top: -2rem;
+justify-content: space-around;
+        height: 700px;
+    }
+
+    .tit_form {
+        position: relative;
+        font-size: var(--extraGde);
+        font-weight: 600;
+        top: -20px;
+        padding: 20px;
+        letter-spacing: 0.25em;
+
+    }
+
+    label {
+        display: block;
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 0px;
+        color: var(--blanco);
+        font-size: var(--casiGrande);
+    }
+
+    input[type="text"],
+    input[type="email"],
+    select,
+    option,
+    textarea {  
+        font-size: var(--casiGrande);
     }
 
     .btn_contacto {
         width: 100%;
         height: 65px;
         padding:0px;
-        font-size: var(--mediana);
+        font-size: var(--grande);
         margin-top: 0.5em;
     }
+
+    
     /* *********************** FOOTER ********************************* */
 
     .footer {
@@ -2846,7 +2937,7 @@ input[type="text"]:focus {
         background: var(--fondoMenu);
         grid-area: footer;
         
-        bottom: -400px;
+        bottom: -450px;
         /* background: var(--botones); */
     }
 
