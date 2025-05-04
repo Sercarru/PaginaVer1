@@ -255,6 +255,10 @@ input[type="submit"]:hover {
     position: relative;
     align-items: center;
 }
+.cont_datos_nav_dir>.datos_nav_dir2 {
+    color: var(--blanco)!important;
+    font-size: var(--mediana);
+}
 
 .nav_direccion {
     display: flex;
@@ -1230,7 +1234,7 @@ input[type="text"]:focus {
     position: relative;
     flex-direction: column;
     text-align: center;
-    color: var(--blanco);
+    color: var(--blanco) !important;
     font-size: var(--peque);
     font-weight: 400;
     /* background: var(--botones); */
@@ -1348,12 +1352,14 @@ input[type="text"]:focus {
         flex-direction: column;
         margin-top: 100px;
         padding-bottom: 50px;
+        color: var(--blanco)!important;
     }
 
     .nav_direccion,
     .datos_nav_dir {
         top: 100px;
         flex-direction: column;
+        text-align: center;
     }
 
     .cell-icon {
@@ -1746,8 +1752,7 @@ input[type="text"]:focus {
         display: flex;
         position: fixed;
         grid-area: aside;
-        height: 100vh;
-        width: var(--anchoMenu);
+        height: 108vh;
     }
 
     .redesSoc {
@@ -2817,7 +2822,7 @@ input[type="text"]:focus {
         /* top: -20px; */
         width: var(--anchoMain);
         height: 1250px; 
-        grid-template-columns: 1fr 10px 1fr 10px;
+        grid-template-columns: 1fr 1fr 10px;
         grid-template-rows: repeat(20, 40px);
         gap: 10px;
         border-radius: 15px;
@@ -2981,7 +2986,9 @@ justify-content: space-around;
         /* box-shadow: 8px 8px 8px rgb(121, 4, 4); */
     }
 
-
+    .cont_datos_footer>cellfoot{
+        color: var(--blanco)!important;
+    }
 
 
 }
