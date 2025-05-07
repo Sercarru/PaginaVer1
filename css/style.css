@@ -9,6 +9,7 @@
         --fondoSecciones: #0088ff;
         --botones: rgb(255, 112, 0);
         --azulOverBtn: rgb(0, 0, 255);
+        --azulOverBtnSemiT: rgba(0, 0, 255, 0.5);
         --azulOscuroSemi: #001e5bbe;
         --azulOscuroSemiTransp: #001e5b63;
         --blanco: #FCFCF7;
@@ -942,8 +943,9 @@
         grid-column: 2/2;
         grid-row: 1/2;
         height: 22em;
-        border-radius: 1em;
-        box-shadow: 5px 5px 20px rgba(0, 38, 255, 0.75);
+        border-radius: 50%;
+        border: groove 3px var(--blancoCasitransp);
+        box-shadow: 0px 0px 10px var(--azulOverBtn);
     }
 
 
@@ -2976,7 +2978,7 @@
         display: flex;
         position: fixed;
         grid-area: aside;
-        height: 100vh;
+        height: 1050px;
         width: var(--anchoMenu);
     }
 
@@ -2988,10 +2990,9 @@
 
     #menu>.cont_datos_nav_dir>p,
     #menu>.cont_datos_nav_dir>.nav_direccion>p {
-        top: 60px;
+        top:30px;
         font-size: var(--mediana);
         flex-direction: column;
-        padding: 0px 10px;
         text-align: center;
     }
 
@@ -3001,18 +3002,18 @@
     }
 
     #menu>.cont_datos_nav_dir>.datos_nav_dir2 {
-        margin-top: 100px;
-        padding-bottom: 50px;
+        margin-top: -50px;
+        padding-bottom: 0px;
     }
 
     .nav_direccion {
-        top: 100px;
+        top: -30px;
         flex-direction: column;
     }
 
     .cell-icon {
         width: 25px;
-        padding-bottom: 10px;
+        padding-bottom: 0px;
     }
 
     button.menu_nav_link {
@@ -3033,8 +3034,8 @@
         flex-direction: column;
         position: absolute;
         align-items: center;
-        gap: 50px;
-        bottom: 75px;
+        gap: 15px;
+        bottom: 50px;
         color: var(--blanco);
         margin-top: 850px;
     }
@@ -3045,6 +3046,10 @@
     /* *********************** ASOCIADOS ************************* */
     /* ************************** CONTACTO ******************************* */
     /* *********************** FOOTER ********************************* */
+
+    .footer {
+        width: 100%;
+    }
 
 
 }
