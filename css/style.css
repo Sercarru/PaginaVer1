@@ -2721,9 +2721,13 @@ input[type="text"]:focus {
 
     .tit_acordeon {
         font-size: var(--casiGrande);
-        font-weight: 800;
-        height: 2.5em;
+        font-weight: 600;
+        height: 2em;
         line-height: 2em;
+    }
+
+    .acordeon-toggle:checked+.tit_acordeon {
+        border-radius: 10px;
     }
 
     /* *********************** ASOCIADOS ************************* */
@@ -2976,6 +2980,22 @@ input[type="text"]:focus {
 /* //////////////////// RESPONSIVE TABLETA 550px ////////////// */
 /* //////////////////////////////////////////////////////////// */
 @media (width < 550px) {
+    :root {
+        --extraGde: 3rem;
+        --grande: 2rem;
+        --casiGrande: 1.5rem;
+        --mediana: 1.25rem;
+        --chica: 1rem;
+        --masChica: 0.85rem;
+        --peque: 0.75rem;
+
+        /* MEDIDAS */
+        --anchoMenu: 150px;
+        --anchoContMenuNav: 150px;
+        --anchoBotMenuNav: 115px;
+        --anchoMain: 540px;
+        --anchoContMain: 500px
+    }
 
     .secciones {
         z-index: -1;
@@ -2986,7 +3006,7 @@ input[type="text"]:focus {
     #conteiner {
         display: grid;
         width: 100%;
-        height: 100vh;
+        height: 100dvh;
         position: absolute;
         grid-template-columns: 1fr 1fr;
         grid-template-areas:
@@ -2997,26 +3017,29 @@ input[type="text"]:focus {
 
 
     .toggle-menu {
-        display: block;
+        width: 540px;
+        padding: 5px;
+        background-color: rgb(144, 0, 0);
+        display: flex;
         position: fixed;
 
-        top: 20px;
-        left: 20px;
+        top: 0px;
+        left: 0px;
         /* z-index: 1000; */
         cursor: pointer;
-        box-shadow: 0px 0px 15px var(--blanco);
+        box-shadow: 0px 0px 15px var(--azulOverBtn);
     }
 
     .toggle-menu img {
         width: 50px;
         background-color: var(--azulOscuroSemi);
-        
+
         border-radius: 15px;
     }
 
     .menu {
         width: 100%;
-        height: 100%;
+        height: 100vh;
         left: 0;
         display: flex;
         position: fixed;
@@ -3036,7 +3059,8 @@ input[type="text"]:focus {
     .menu_oculto {
         left: 0;
     }
-/* CHECAR CHECAR CHECAR CHECAR CHECAR CHECAR CHECAR CHECAR */
+
+    /* CHECAR CHECAR CHECAR CHECAR CHECAR CHECAR CHECAR CHECAR */
     #conteiner>nav {
         display: flex;
         position: relative;
@@ -3065,7 +3089,7 @@ input[type="text"]:focus {
 
     #menu>.cont_datos_nav_dir>p,
     #menu>.cont_datos_nav_dir>.nav_direccion>p {
-        
+
         font-size: var(--mediana);
         flex-direction: column;
         text-align: center;
@@ -3107,8 +3131,10 @@ input[type="text"]:focus {
     #conteiner>main {
         position: relative;
         max-width: var(--anchoMain);
+        top: 60px;
     }
-/* CHECAR CHECAR CHECAR CHECAR CHECAR CHECAR CHECAR CHECAR */
+
+    /* CHECAR CHECAR CHECAR CHECAR CHECAR CHECAR CHECAR CHECAR */
     .redesSoc {
         width: 100%;
         display: flex;
@@ -3123,15 +3149,287 @@ input[type="text"]:focus {
     }
 
     /* ***********************FOTOMAIN ************************** */
+    #fotomain {
+        width: var(--anchoMain);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .foot_inicial {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: 540px;
+        margin-bottom: 50px;
+    }
+
+    .msg_anim>p {
+        text-align: center;
+        justify-content: center;
+        width: var(--anchoMain);
+        font-style: var(--fuente-principal);
+        font-size: var(--casiGrande);
+        font-weight: 600;
+        color: var(--color-principal);
+    }
+
+    .contacto {
+        text-decoration: none;
+        padding: 0;
+
+    }
+
     /******************************NOSOTROS ********************************/
+
+    #cont_nosotros {
+        display: grid;
+        position: absolute;
+        /* margin-top: 0em; */
+        width: var(--anchoMain);
+        height: 750px;
+        grid-template-columns: repeat(20, 27px);
+        grid-template-rows: repeat(35, 30px);
+    }
+
+    .cont_dir_nosotros {
+        grid-column: 1/20;
+        grid-row: 6/10;
+        position: relative;
+        display: grid;
+        width: var(--anchoMain);
+        grid-template-columns: repeat(20, 27px);
+        grid-template-rows: repeat(20, 15px);
+    }
+
+    .logo_dir_nosotros {
+        width: 175px;
+        grid-column: 8/16;
+        grid-row: 2/10;
+        animation-range: entry 0% cover 50%;
+    }
+
+    .txt_dir_nosotros {
+        grid-column: 3/20;
+        grid-row: 15/20;
+    }
+
+    .cont_dir_nosotros>p {
+        font-size: var(--casiGrande);
+    }
+
+    .tpo_experiencia {
+        position: relative;
+        top: -10px;
+        font-size: var(--casiGrande);
+    }
+
+    .cont_ramas-der_nosotros {
+        display: grid;
+        position: absolute;
+        width: 490px;
+        border-radius: 15px;
+        /* width: var(--anchoContMain); */
+        /* background-color: rgb(189, 0, 0); */
+        min-height: 600px;
+        grid-column: 2/18;
+        grid-row: 18/20;
+        padding: 0px;
+        top: 0px;
+        grid-template-columns: repeat(20, 24px);
+        grid-template-rows: repeat(25, 24px);
+        animation: entrandoAbajo linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 30%;
+    }
+
+    .tit_card {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        font-size: var(--casiGrande);
+        font-weight: 500;
+    }
+
+    .card1 {
+        /* background-color: rgb(154, 189, 0); */
+        grid-column: 2/10;
+        grid-row: 2/10;
+    }
+
+    .card2 {
+        position: relative;
+        /* background-color: rgb(154, 189, 0); */
+        grid-column: 11/19;
+        grid-row: 2/10;
+    }
+
+    .card3 {
+        position: relative;
+        /* background-color: rgb(154, 189, 0); */
+        grid-column: 2/10;
+        grid-row: 11/18;
+    }
+
+    .card4 {
+        position: relative;
+        /* background-color: rgb(154, 189, 0); */
+        grid-column: 11/19;
+        grid-row: 11/18;
+    }
+
+    .card5 {
+        position: relative;
+        /* background-color: rgb(154, 189, 0); */
+        grid-column: 2/19;
+        grid-row: 19/24;
+        font-size: var(--casiGrande);
+    }
+
     /* *************************** SERVICIOS****************************** */
+
+    .cont_servicios {
+        display: grid;
+        position: relative;
+        margin-top: 100em;
+        /* background: var(--fondoMenu); */
+        width: 100dvw;
+        height: 1100px;
+        grid-template-columns: 10px 1fr 10px;
+        grid-template-rows: repeat(10, 50px);
+        gap: 0px;
+        padding: 45px;
+        font-size: var(--chica);
+        border-radius: 0px;
+        /* border-radius: 25px; */
+    }
+
+    .cont_izq_servicios {
+        width: 100%;
+        height: 375px;
+        position: absolute;
+        grid-column: 2/3;
+        grid-row: 1/5;
+        /* height: 735px; */
+        /* position: inherit; */
+        top: 0px;
+        justify-content: space-between;
+    }
+
+    .cont_izq_servicios>a>button {
+        position: relative;
+        text-decoration: none;
+        padding: 0;
+        justify-self: center;
+    }
+
+    .btn_servicios {
+        position: relative;
+        width: 400px;
+        height: 50px;
+        left: 0px;
+    }
+
+    .cont_der_servicios {
+        width: 100%;
+        grid-column: 2/3;
+        grid-row: 9/10;
+        top: 0px;
+        justify-content: space-around;
+        animation: entrandoDer linear;
+        animation-timeline: view();
+        animation-range: entry 0% cover 40%;
+    }
+
+    .acordeon {
+        width: 100%;
+        right: 0;
+    }
+
+    .tit_acordeon {
+        font-size: var(--grande);
+        padding: 10px;
+    }
+
+    .acordeon-content ul li {
+        font-size: var(--casiGrande);
+    }
+
+    .acordeon-toggle:checked+.tit_acordeon {
+        border-radius: 10px;
+    }
+
     /* *********************** ASOCIADOS ************************* */
+    #cont_seccion_asociados {
+        height: 950px;
+        padding: 50px 5px;
+    }
+    
+    .contenedor_asociados {
+        display: grid;
+        position: relative;
+        width: var(--anchoContMain);
+        justify-items: center;
+        align-items: center;
+    }
+
+    .cont_asociados {
+        display: grid;
+        position: relative;
+        width: 90%;
+        justify-items: center;
+        align-items: center;
+        /* height: 30%; */
+        /* gap: 15px; */
+        /* margin: 1em 0; */
+        /* border: solid 3px crimson; */
+    }
+
+    .asociados {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: 90%;
+        height: 20em;
+        justify-content: space-evenly;
+        /* border: solid 3px rgb(255, 0, 0); */
+
+        li {
+            font-size: var(--casiGrande);
+            width: 90%;
+            /* align-items: center; */
+            /* border: solid 3px black; */
+        }
+
+    }
+
     /* ************************** CONTACTO ******************************* */
+    #contacto {
+        top: 60px;
+        /* 
+        display: grid;
+        position: relative; */
+        /* top: -20px; */
+        width: var(--anchomain);
+        height: 1250px;
+        grid-template-columns: 1fr 1fr 10px;
+        grid-template-rows: repeat(20, 40px);
+        gap: 10px;
+        border-radius: 15px;
+        margin: 10px;
+        box-shadow: 0px 0px 8px var(--azulOscuroSemiTransp);
+
+
+    }
+
+    h1 {
+        margin-top: 0px;
+    }
+
     /* *********************** FOOTER ********************************* */
 
     .footer {
         width: 102%;
-        
+
     }
 
 
