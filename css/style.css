@@ -3590,7 +3590,10 @@ input[type="text"]:focus {
 /* //////////////////////////////////////////////////////////// */
 /* //////////////////// RESPONSIVE CELULAR < 450 ////////////// */
 /* //////////////////////////////////////////////////////////// */
-@media screen and (max-width:435px) {
+/* @media screen and (max-width:435px) { */
+
+
+@media (width < 450px) {
     :root {
         /* --extraGde: 3rem;
         --casiGrande: 1.5rem;
@@ -3891,14 +3894,176 @@ input[type="text"]:focus {
 /* //////////////////////////////////////////////////////////// */
 /* //////////////////// RESPONSIVE CELULAR < 400 ////////////// */
 /* //////////////////////////////////////////////////////////// */
-@media screen and (max-width:400px) {
+/* @media screen and (max-width:400px) { */
+
+@media (width < 400px) {
+    :root {
+        --grande: 1.75rem;
+
+        /* MEDIDAS */
+        /* --anchoBotMenuNav: 1px; */
+        --anchoMain: 100%;
+        /* --anchoMain: 30px; */
+        --anchoContMain: calc(100% - 20px);
+    }
+
+    #conteiner>main {
+        position: relative;
+        height: 5750px;
+        /* height: max-content; */
+        min-width: var(--anchoMain);
+        margin-top: 60px;
+        /* background-color: #0088ff; */
+        scrollbar-width: none;
+        /* For Firefox */
+        -ms-overflow-style: none;
+        /* For Internet Explorer and Edge */
+    }
 
     /* ***********************NAV SIDE BAR ************************** */
+
+
     /* ***********************FOTOMAIN ************************** */
+    #fotomain {
+        width: var(--anchoMain);
+        /* padding: 15px 5px; */
+        margin: 0px auto;
+    }
+
+    .foot_inicial {
+        background: transparent;
+    }
+
+    .msg_anim>p {
+        width: 400px;
+        font-size: var(--casiGrande);
+        font-weight: 600;
+        color: var(--color-principal);
+        margin-bottom: 5px;
+    }
+
+
     /******************************NOSOTROS ********************************/
+
+    #cont_nosotros {
+        height: 1650px;
+        margin-top: 5em;
+        grid-template-columns: repeat(18, 22px);
+        grid-template-rows: repeat(80, 22px);
+    }
+
+    .cont_dir_nosotros {
+        grid-column: 1/17;
+        grid-template-columns: repeat(14, 27px);
+        grid-template-rows: repeat(30, 15px);
+    }
+
+
+    .logo_dir_nosotros {
+        grid-column: 5/12;
+    }
+
+
+    .txt_dir_nosotros {
+        grid-column: 2/15;
+        grid-row: 17/29;
+    }
+
+    .cont_tit_nosotros {
+        grid-column: 4/16;
+        grid-row: 1/6;
+    }
+
+
+    .cont_ramas-der_nosotros {
+        width: var(--anchoContMain);
+        border-radius: 10px;
+        min-height: 1075px;
+        /* background-color: rgb(189, 0, 0); */
+        grid-column: 2/19;
+        grid-row: 27/40;
+
+    }
+
+    .card1 {
+        /* background-color: rgb(189, 0, 0); */
+        grid-column: 2/18;
+        grid-row: 2/9;
+    }
+
+    .card2 {
+        position: relative;
+        /* background-color: rgb(189, 0, 0); */
+        grid-column: 2/18;
+        grid-row: 10/18;
+    }
+
+    .card3 {
+        position: relative;
+        /* background-color: rgb(189, 0, 0); */
+        grid-column: 2/18;
+        grid-row: 19/26;
+    }
+
+    .card4 {
+        position: relative;
+        /* background-color: rgb(189, 0, 0); */
+        grid-column: 2/18;
+        grid-row: 27/34;
+    }
+
+    .card5 {
+        position: relative;
+        height: 220px;
+        height: 250px;
+        /* background-color: rgb(189, 0, 0);; */
+        grid-column: 2/18;
+        grid-row: 35/42;
+        font-size: var(--casiGrande);
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+    }
+
+    .txt_card,
+    .card5_txt {
+        /* color: var(--blanco); */
+        padding: 10px;
+        font-size: var(--casiGrande);
+        font-weight: 600;
+    }
+
     /* *************************** SERVICIOS****************************** */
+    .cont_servicios {
+        margin-top: 116em;
+        height: 1375px;
+        font-size: var(--mediana);
+        border-radius: 0px;
+    }
+
+    .btn_servicios {
+        width: 300px;
+        border-radius: 10px;
+    }
+
+    .btn_servicios img {
+        width: 35px;
+        padding: 0px 5px;
+    }
+
+ 
     /* *********************** ASOCIADOS ************************* */
+
+
     /* ************************** CONTACTO ******************************* */
+    .btn_contacto img {
+        padding: 5px 10px;
+        height: 45px;
+    }
+
+    .tit_form {
+        letter-spacing: 0.1em;
+    }
+
     /* *********************** FOOTER ********************************* */
 
 }
