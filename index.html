@@ -14,14 +14,14 @@
     <div id="conteiner">
         <!---------------------------------- MENU DE NAVEGACIÓN ----------------------------------------------->
         <!-- <span class="opcionSeleccionada" id="opcionSeleccionada"></span> -->
-        <div class="btnMobil" >
-            <img id="toggle-menu"  class="toggle-menu" src="imagenes/menuH.svg" alt="">
-            <a href="#home"><img class="img_menu_resp" src="imagenes/home.svg"alt=""></a>
-            
-        </div> 
+        <div class="btnMobil">
+            <img id="toggle-menu" class="toggle-menu" src="imagenes/menuH.svg" alt="">
+            <a href="#home"><img class="img_menu_resp" src="imagenes/home.svg" alt=""></a>
+
+        </div>
         <nav id="menu_nav" class="menu_nav nav">
             <ul id="menu" class="menu">
-                <img class="soloMobil"   src="imagenes/LogoMini.png" alt="">
+                <img class="soloMobil" src="imagenes/LogoMini.png" alt="">
                 <li class="miniImgLogo">
                     <a href="#home"><img src="imagenes/Logo.png" alt="Logo" class="logo noactivar"></a>
                 </li>
@@ -354,11 +354,14 @@
                             <legend class="tit_form">ESCRÍBENOS</legend>
                             <form class="cliente" action="https://formspree.io/f/xvonjrpa" method="POST">
                                 <label for="control_nombre">Nombre</label>
-                                <input class="texto_lbl" type="text" name="nombre" id="control_nombre" required>
+                                <input class="texto_lbl" placeholder="Escribe aquí tu nombre" type="text" name="nombre"
+                                    id="control_nombre" required>
                                 <label for="correo">Correo electrónico</label>
-                                <input class="texto_lbl" type="email" name="correo" id="correo" required>
+                                <input class="texto_lbl" type="email" placeholder="Escribe aquí tu correo electrónico"
+                                    name="correo" id="correo" required>
                                 <label for="servicio">Elige el servicio requerido<br></label>
-                                <select name="servicio" id="servicio">
+                                <select name="servicio" placeholder="Elige una opción" id="servicio">
+                                    <option value="" disabled selected hidden>Por favor, elige una opción...</option>
                                     <option value="Penal">Penal</option>
                                     <option value="Laboral">Laboral</option>
                                     <option value="Mercantil">Mercantil</option>
